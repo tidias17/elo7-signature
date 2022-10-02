@@ -46,6 +46,11 @@ const Detash = ({
       }
     });
 	}
+  const disabledSubmit = () => {
+    return dataForm.user === '' || dataForm.password === '' ||
+      dataForm.user.length < 4 || dataForm.password.length < 4;
+  }
+
   return (
     <StyledContainer className="container-position">
       <Typography type="subtitle">Login</Typography>
@@ -62,7 +67,9 @@ const Detash = ({
           name="password"
           input={change}
         />
-        <Button>Acessar</Button>
+        <Button
+          disabled={disabledSubmit()}
+        >Acessar</Button>
       </form>
       </StyledContainer>
   )
