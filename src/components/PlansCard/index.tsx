@@ -16,7 +16,7 @@ type TPeriod = {
 type TData = {
   category: string,
   content: string
-  periodValue: TPeriod,
+  periodValue: any,
   quantityProducts: number,
 };
 
