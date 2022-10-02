@@ -8,7 +8,7 @@ export const StyledContent = styled.section`
   flex-direction: column;
   flex-flow: wrap;
   justify-content: center;
-  background-color: ${theme.colors.manga};
+  background-color: ${theme.colors.mangaOpacity};
   border-radius: 8px;
   p:first-child {
     width: 100%;

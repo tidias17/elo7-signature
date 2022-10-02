@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
+import { Button } from 'components/Buttons'
 import Typography from 'components/Typography';
 import { Icon } from 'components/Icon';
 import {
@@ -47,7 +47,7 @@ const PlansCard = ({
         <Typography type="normal">{formatCentsToCurrency(data.periodValue[period])}</Typography>
       </StyledValue>
       <Typography type="normal">{data.content}</Typography>
-      <button>Assinar</button>
+      <Button>Escolher o plano {data.category}</Button>
     </StyledContent>
   )
 };
