@@ -9,13 +9,13 @@ import {
   StyledContainer,
 } from './styled';
 
-type DetashProps = {
+type LoginFormProps = {
 
 };
 
-const Detash = ({
+const LoginForm = ({
 
-}: DetashProps) => {
+}: LoginFormProps) => {
   const router = useRouter();
   const { saveToken, cleanToken } = useAuth();
   const [dataForm, setDataForm] = useState({
@@ -75,4 +75,4 @@ const Detash = ({
   )
 };
 
-export default Detash;
+export default LoginForm;
