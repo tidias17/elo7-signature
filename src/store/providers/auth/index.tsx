@@ -54,7 +54,6 @@ const AuthProvider = ({ children }:any) => {
   
       fetchData()
       .then(async (response) => {
-        console.log('qdp', response);
         if (response.ok) {
           const temp = await response.json();
           saveToken(temp);

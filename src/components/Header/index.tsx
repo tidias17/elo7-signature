@@ -6,17 +6,17 @@ import {
 } from './styled';
 
 type HeaderProps = {
-
+  text?: string;
 };
 
 const Header = ({
-
+  text = 'Clube de produtos fora de série',
 }: HeaderProps) => {
   return (
     <StyledHeader>
       <StyledContent>
         <Icon name="logo-manga" />
-        <Typography type="title">Clube de produtos fora de série</Typography>
+        <Typography type="title">{text}</Typography>
       </StyledContent>
     </StyledHeader>
   )

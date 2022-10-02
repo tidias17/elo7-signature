@@ -48,7 +48,8 @@ export type InputProps = {
   prefixed?: string;
   sufixed?: string;
   multiline?: boolean;
-  maskFormat?: string | any
+  maskFormat?: string | any;
+  input: any;
 };
 
 export const InputText = ({
@@ -65,6 +66,7 @@ export const InputText = ({
   sufixed = '',
   multiline = false,
   maskFormat = '',
+  input,
 }:InputProps ) => {
   const [value, setValue] = useState('');
   const [typeInput, setTypeInput] = useState('');
@@ -72,6 +74,7 @@ export const InputText = ({
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
+    input(event.target.value, event.target.name);
   };
   const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
