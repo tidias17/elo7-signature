@@ -62,17 +62,16 @@ const Plans = ({
       <StyleContainerPlans>
         <StyleActionPlans>
           {periodOptions.map((item, index) => (
-            <>
+            <div key={index}>
               <input
                 type="radio"
                 value={item}
                 id={item}
                 checked={period === item}
                 onChange={() => setPeriod(item)}
-                key={index}
               />
               <label htmlFor={item}>{item}</label>
-            </>
+            </div>
           ))}
         </StyleActionPlans>
         <StyleContentPlans>
