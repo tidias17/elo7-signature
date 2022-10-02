@@ -21,9 +21,9 @@ const Plans = ({
       {
         category: 'basic',
         periodValue: {
-          yearly: 123,
-          semiannual: 234,
-          monthly: 345,
+          anual: 123,
+          semestral: 234,
+          mensal: 345,
         },
         quantityProducts: 2,
         content: 'Envio de 02 (dois) produtos fora de série por mês, de uma categoria a ser definida.'
@@ -31,9 +31,9 @@ const Plans = ({
       {
         category: 'intermediary',
         periodValue: {
-          yearly: 456,
-          semiannual: 567,
-          monthly: 678,
+          anual: 456,
+          semestral: 567,
+          mensal: 678,
         },
         quantityProducts: 4,
         content: 'Envio de 04 (quatro) produtos fora de série por mês, de uma categoria a ser definida.'
@@ -41,17 +41,17 @@ const Plans = ({
       {
         category: 'plus',
         periodValue: {
-          yearly: 789,
-          semiannual: 890,
-          monthly: 901,
+          anual: 789,
+          semestral: 890,
+          mensal: 901,
         },
         quantityProducts: 6,
         content: 'Envio de 06 (seis) produtos fora de série por mês, de uma categoria a ser definida.'
       }
   ];
 
-  const [period, setPeriod] = useState('yearly');
-  const periodOptions = ['monthly', 'semiannual', 'yearly'];
+  const [period, setPeriod] = useState('anual');
+  const periodOptions = ['mensal', 'semestral', 'anual'];
 
   return (
     <StyledContent className="container-position">

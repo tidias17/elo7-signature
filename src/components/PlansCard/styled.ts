@@ -8,13 +8,16 @@ export const StyledContent = styled.section`
   flex-direction: column;
   flex-flow: wrap;
   justify-content: center;
-  background-color: ${theme.colors.mangaOpacity};
+  background-color: ${theme.colors.grey100};
   border-radius: 8px;
+  border: 2px solid ${theme.colors.manga};
   p:first-child {
     width: 100%;
-    font-weight: 400;
+    font-weight: 600;
     text-transform: uppercase;
     text-align: center;
+    font-size: 20px;
+    color: ${theme.colors.lousa}
   }
   p:last-child {
     font-style: italic;

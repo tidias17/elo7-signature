@@ -8,9 +8,9 @@ import {
 } from './styled';
 
 type TPeriod = {
-  yearly: number,
-  semiannual: number,
-  monthly: number,
+  anual: number,
+  semestral: number,
+  mensal: number,
 };
 
 type TData = {
