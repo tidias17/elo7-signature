@@ -14,7 +14,7 @@ type TTestimonial = {
 
 type TPlans = {
   category: string;
-  periodValue: TPeriodValue;
+  periodValue: TPeriodValue[];
   quantityProducts: number;
   content: string;
 };
@@ -90,6 +90,7 @@ export default function handler(
       content: 'Envio de 06 (seis) produtos fora de série por mês, de uma categoria a ser definida.'
     }
   ];
+
   return res.status(201)
     .json({
       testimonial,

@@ -11,7 +11,6 @@ type TDAta = {
   description: string;
   disabled?: boolean;
 };
-
 type OpinionProps = {
   testimonial: TDAta[];
 };
@@ -19,7 +18,6 @@ type OpinionProps = {
 const Opinion = ({
   testimonial
 }: OpinionProps) => {
-  
   return (
     <StyledContent className="container-position">
       <Typography type="subtitle">Opinião de quem conhece</Typography>
@@ -28,9 +26,7 @@ const Opinion = ({
       </Typography>
       <StyledTestimonials>
         {testimonial.map((item, index) => (
-          !item.disabled && (
-            <TestimonialCard data={item} key={index} />
-          )
+          <TestimonialCard data={item} key={index} />
         ))}
       </StyledTestimonials>
     </StyledContent>

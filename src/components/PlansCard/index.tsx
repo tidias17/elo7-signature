@@ -30,8 +30,6 @@ const PlansCard = ({
   data, period
 }: PlansCardProps) => {
 
-  const formatCentsToCurrency = (cents:number, options = { locale: 'pt-BR', currency: 'BRL' }) =>
-  new Intl.NumberFormat(options.locale, { style: 'currency', currency: options.currency }).format(cents / 100.0);
   return (
     <StyledContent>
       <Typography type="normal">{data.category}</Typography>
@@ -45,7 +43,7 @@ const PlansCard = ({
         )}
       </StyledIcons>
       <StyledValue>
-        <Typography type="normal">{formatCentsToCurrency(data.periodValue[period])}</Typography>
+        <Typography type="normal">{data.periodValue[period]}</Typography>
       </StyledValue>
       <Typography type="normal">{data.content}</Typography>
       <Link href="/signup">
