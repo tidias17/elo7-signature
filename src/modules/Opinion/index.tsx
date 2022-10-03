@@ -5,37 +5,21 @@ import {
   StyledTestimonials,
 } from './styled';
 
-type OpinionProps = {
+type TDAta = {
+  name: string;
+  image: string;
+  description: string;
+  disabled?: boolean;
+};
 
+type OpinionProps = {
+  testimonial: TDAta[];
 };
 
 const Opinion = ({
-
+  testimonial
 }: OpinionProps) => {
-  // TODO: Obter estes dados de API e fazer lá o retorno apenas de itens não disabilitados
-  const testimonial = [
-    {
-      name: 'Joaozinho',
-      image: 'joaozinho.png',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse blandit pretium mauris, ut pellentesque tellus laoreet sed. Nulla nisi purus, facilisis ac ipsum non, iaculis.'
-    },
-    {
-      name: 'Pedrinho',
-      image: 'pedrinho.png',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget sagittis tortor. Quisque lectus dolor, suscipit sit amet.'
-    },
-    {
-      name: 'Luizinho',
-      image: 'luizinho.png',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris volutpat risus lacus, eu cursus neque vulputate vitae. Fusce sollicitudin ac nunc et.'
-    },
-    {
-      name: 'Luizinho',
-      image: 'luizinho.png',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris volutpat risus lacus, eu cursus neque vulputate vitae. Fusce sollicitudin ac nunc et.',
-      disabled: true,
-    },
-  ];
+  
   return (
     <StyledContent className="container-position">
       <Typography type="subtitle">Opinião de quem conhece</Typography>

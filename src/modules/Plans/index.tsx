@@ -8,47 +8,26 @@ import {
   StyleContentPlans
 } from './styled';
 
-type PlansProps = {
+type TPlans = {
+  category: string;
+  periodValue: TPeriodValue;
+  quantityProducts: number;
+  content: string;
+};
 
+type TPeriodValue = {
+  anual: number;
+  semestral: number;
+  mensal: number;
+}
+
+type PlansProps = {
+  plans: TPlans[];
 };
 
 const Plans = ({
-
+  plans
 }: PlansProps) => {
-  // TODO: Obter estes dados de API e fazer lá o retorno apenas de itens não disabilitados
-  // Fazer tb as devidas conversões do valor apresentado a tela.
-  const plans = [
-      {
-        category: 'basic',
-        periodValue: {
-          anual: 123,
-          semestral: 234,
-          mensal: 345,
-        },
-        quantityProducts: 2,
-        content: 'Envio de 02 (dois) produtos fora de série por mês, de uma categoria a ser definida.'
-      },
-      {
-        category: 'intermediary',
-        periodValue: {
-          anual: 456,
-          semestral: 567,
-          mensal: 678,
-        },
-        quantityProducts: 4,
-        content: 'Envio de 04 (quatro) produtos fora de série por mês, de uma categoria a ser definida.'
-      },
-      {
-        category: 'plus',
-        periodValue: {
-          anual: 789,
-          semestral: 890,
-          mensal: 901,
-        },
-        quantityProducts: 6,
-        content: 'Envio de 06 (seis) produtos fora de série por mês, de uma categoria a ser definida.'
-      }
-  ];
 
   const [period, setPeriod] = useState('anual');
   const periodOptions = ['mensal', 'semestral', 'anual'];
