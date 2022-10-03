@@ -24,7 +24,7 @@ const RegistrationForm = ({
     email: '',
     confirmEmail: '',
     password: '',
-    plan: 'intermediary',
+    plan: '',
   })
   const change = (value: string, fieldName: string) => {
     setDataForm({ ...dataForm, [fieldName]: value })
@@ -86,6 +86,7 @@ const RegistrationForm = ({
           name="password"
           input={change}
         />
+        <Typography type="normal">Plano:</Typography>
         {planOptions.map((item, index) => (
           <div key={index}>
             <input

@@ -3,7 +3,7 @@ import { theme } from 'theme'
 
 export const StyledContainer = styled.section`
   width: 280px;
-  height: 400px;
+  height: 480px;
   margin-top: 100px !important;
   padding: 20px 12px;
   border: 2px solid ${theme.colors.manga};
@@ -18,6 +18,9 @@ export const StyledContainer = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    p, button {
+      margin-top: 16px;
+    }
   }
 }
 `;
