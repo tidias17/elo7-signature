@@ -26,7 +26,7 @@ const Header = ({
           </a>
         </Link>
         <Typography type="title">{text}</Typography>
-        {currentPath !== '/signin' && (
+        {(currentPath !== '/signin' && currentPath !== '/system/dashboard') && (
           <Link href="/signin">
             <a>
               <OutlineButton small>Login</OutlineButton>

@@ -1,35 +1,20 @@
-import { useEffect } from 'react';
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import { useRouter } from 'next/router';
+import Layout from 'modules/Layout'
+import Typografy from 'components/Typography'
 import { useAuth } from 'store/context/auth';
 
 const Home: NextPage = () => {
   const { contentToken } = useAuth();
-  const router = useRouter();
-  useEffect(() => {
-    
-  }, []);
   return (
-    <>
-      <Head>
-        <title>Dashboard</title>
-        <meta name="description" content="Esta é a página inicial" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <header>
-        header
-      </header>
-
-      <main>
-        Dashboard
-      </main>
-
-      <footer>
-        footer
-      </footer>
-    </>
+    <Layout
+      footer={false}
+      descriptionTitleHeader="Clube de produtos fora de série | Dashboard"
+    >
+      <div className="container-position">
+        <Typografy type="normal">Olá {contentToken.name}, que bom ter você por aqui!!</Typografy>
+        <Typografy type="normal">O seu atual plano contratado é o {contentToken.plan}.</Typografy>
+      </div>
+    </Layout>
   )
 }
 
