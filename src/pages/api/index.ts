@@ -50,8 +50,14 @@ export default function handler(
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris volutpat risus lacus, eu cursus neque vulputate vitae. Fusce sollicitudin ac nunc et.'
     },
     {
-      name: 'Luizinho',
-      image: 'luizinho.png',
+      name: 'Jorginho',
+      image: 'pedrinho.png',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris volutpat risus lacus, eu cursus neque vulputate vitae. Fusce sollicitudin ac nunc et.',
+      disabled: true,
+    },
+    {
+      name: 'Mariazinha',
+      image: 'joaozinho.png',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris volutpat risus lacus, eu cursus neque vulputate vitae. Fusce sollicitudin ac nunc et.',
       disabled: true,
     },
