@@ -29,7 +29,9 @@ export const StyledPrimitiveButton = styled.button<{ $small?: boolean; icon?: st
       white-space: nowrap;
 
       ${Label} {
-        font-size: 12px;
+        font-size: 16px;
+        padding: 8px 16px;
+        font-weight: 600;
       }
     `}
 
@@ -74,15 +76,17 @@ export const StyledPrimaryButton = styled(StyledPrimitiveButton)`
 export const StyledOutlineButton = styled(StyledPrimitiveButton)`
   align-items: center;
   background-color: ${props => (props.disabled ? 'transparent' : `${theme.colors.white}`)};
-  border: solid 1px ${theme.colors.black};
-  color: ${theme.colors.black};
+  border: solid 2px ${theme.colors.manga};
+  span {
+    color: ${theme.colors.manga};
+  }
   display: flex;
   justify-content: center;
   line-height: 1em;
 
   &:focus,
   &:hover {
-    background-color: ${theme.colors.grey100};
+    background-color: ${theme.colors.mangaOpacity};
     text-decoration: none;
   }
 

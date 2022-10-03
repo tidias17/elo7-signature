@@ -1,27 +1,16 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
+import Layout from 'modules/Layout'
+import RegistrationForm from 'modules/RegistrationForm'
 
 const Home: NextPage = () => {
+
   return (
-    <>
-      <Head>
-        <title>Cadastro</title>
-        <meta name="description" content="Esta é a página inicial" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <header>
-        header
-      </header>
-
-      <main>
-        Cadastro
-      </main>
-
-      <footer>
-        footer
-      </footer>
-    </>
+    <Layout
+      footer={false}
+      descriptionTitleHeader="Clube de produtos fora de série | Assinar"
+    >
+      <RegistrationForm />
+    </Layout>
   )
 }
 

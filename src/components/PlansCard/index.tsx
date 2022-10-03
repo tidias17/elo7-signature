@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Button } from 'components/Buttons'
 import Typography from 'components/Typography';
 import { Icon } from 'components/Icon';
@@ -47,7 +48,11 @@ const PlansCard = ({
         <Typography type="normal">{formatCentsToCurrency(data.periodValue[period])}</Typography>
       </StyledValue>
       <Typography type="normal">{data.content}</Typography>
-      <Button>Escolher o plano {data.category}</Button>
+      <Link href="/signup">
+        <a>
+          <Button>Escolher o plano {data.category}</Button>
+        </a>
+      </Link>
     </StyledContent>
   )
 };

@@ -6,7 +6,7 @@ export const theme = {
     lousa: '#008B90',
     darker: '#333333',
     manga: '#FDB933',
-    mangaOpacity: '#ffad2e94',
+    mangaOpacity: '#ffad2e38',
     grey100: '#e1e1e1',
     grey300: '#B3B3B3',
     grey400: '#999999',
