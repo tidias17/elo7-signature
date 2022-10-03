@@ -18,16 +18,20 @@ const RegistrationForm = ({
 }: RegistrationProps) => {
   const router = useRouter();
   const { saveToken, cleanToken } = useAuth();
+  const planOptions = ['basic', 'intermediary', 'plus'];
   const [dataForm, setDataForm] = useState({
-    user: '',
+    name: '',
+    email: '',
+    confirmEmail: '',
     password: '',
+    plan: 'intermediary',
   })
   const change = (value: string, fieldName: string) => {
     setDataForm({ ...dataForm, [fieldName]: value })
   }
   const handleSubmit = async (e:any) => {
 		e.preventDefault();
-    await fetch('/api/signin', {
+    await fetch('/api/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -47,8 +51,11 @@ const RegistrationForm = ({
     });
 	}
   const disabledSubmit = () => {
-    return dataForm.user === '' || dataForm.password === '' ||
-      dataForm.user.length < 4 || dataForm.password.length < 4;
+    return dataForm.name === '' || dataForm.name.length < 4 ||
+    dataForm.email === '' || dataForm.email.length < 4 ||
+    dataForm.confirmEmail === '' || dataForm.confirmEmail !== dataForm.email ||
+    dataForm.password === '' || dataForm.password.length < 4 ||
+    dataForm.plan === ''
   }
 
   return (
@@ -67,16 +74,35 @@ const RegistrationForm = ({
           name="email"
           input={change}
         />
-
+        <InputText
+          label="Confirmação de e-mail"
+          type="text"
+          name="confirmEmail"
+          input={change}
+        />
         <InputText
           label="Senha"
           type="password"
           name="password"
           input={change}
         />
+        {planOptions.map((item, index) => (
+          <div key={index}>
+            <input
+              type="radio"
+              value={item}
+              id={item}
+              onChange={() => setDataForm({ ...dataForm, plan: item })}
+              checked={dataForm.plan === item}
+            />
+            <label htmlFor={item}>{item}</label>
+          </div>
+        ))}
         <Button
           disabled={disabledSubmit()}
-        >Assinar</Button>
+        >
+          Assinar
+        </Button>
       </form>
       </StyledContainer>
   )
