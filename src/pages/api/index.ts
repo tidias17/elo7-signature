@@ -14,7 +14,7 @@ type TTestimonial = {
 
 type TPlans = {
   category: string;
-  periodValue: TPeriodValue[];
+  periodValue: TPeriodValue;
   quantityProducts: number;
   content: string;
 };
